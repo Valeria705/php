@@ -66,10 +66,6 @@
         $division=$uno/$dos;
         $modulo=$uno%$dos;
 
-
-
-
-        
         echo "<p> Suma: " . $suma . "</p>";
         echo "<p> Resta: " . $resta . "</p>";
         echo "<p> Multiplicacion: " . $multiplicacion . "</p>";
@@ -80,7 +76,64 @@
 
     }
     ?>
+    <h1>Punto 4</h1>
+    <form method="get">
+        <label>Digite numero </label> </br></br>
+        <input type="number" name="num" placeholder="Digite numero 1"/></br></br>
+        <button type="submit">Enviar</button>
+    </form>
+    <?php
+    if(isset($_GET["num"])){
+        $num=$_GET["num"];
+        if($num%2==0){
+            echo "<p> " . $num . " Es par</p>";
+
+        }else{
+            echo "<p> " . $num . " No es par</p>";
+        }
+        if($num<0){
+            echo "<p> " . $num . " Es negativo</p>";
+
+        }else{
+            echo "<p> " . $num . " Positivo</p>";
+        }
+
+
+    }
+    ?>
+     <h1>Punto 5</h1>
+    <form method="get">
+        <label>Digite numeros</label> </br></br>
+        <input type="number" name="uno" placeholder="Digite numero 1"/></br></br>
+        <input type="number" name="dos" placeholder="Digite numero 2"/></br></br>
+        <button type="submit">Enviar</button>
+    </form>
+    <?php
+    if(isset($_GET["uno"])){
+        $uno=$_GET["uno"];
+        $dos=$_GET["dos"];
+
+        if($uno>$dos){
+            echo "<p> " . $uno . " Es mayor </p>";
+
+        }else{
+            echo "<p> " . $dos . " Es mayor </p>";
+        }
+        if($uno==$dos){
+            echo "<p> " . $dos . " y ". $uno ." son iguales </p>";
+
+        }
+     
+    }
+    ?>
     
+
+
+
+
+
+
+
 
 </body>
 </html>
